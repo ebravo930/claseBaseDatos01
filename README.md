@@ -124,3 +124,78 @@ Cantidad: 2
 Fecha_Pedido: (fecha actual)
 Eliminación de Cliente:
 Elimina el cliente con ID 2 de la tabla "Clientes".
+
+
+## Clase 03
+En esta sesión, continuaremos nuestra exploración de las bases de datos con un enfoque en la implementación práctica de una tienda en línea. Aprenderemos a manejar y manipular datos relacionados con productos, clientes, ventas, y detalles de ventas.
+
+Base de Datos: TiendaOnlineV2
+Para esta clase, utilizaremos la base de datos TiendaOnlineV2, la cual incluye las siguientes tablas y relaciones:
+
+Estructura de la Base de Datos:
+Producto
+
+ProductoID (Identificador único del producto)
+Nombre (Nombre del producto)
+Precio (Precio del producto)
+Stock (Cantidad disponible en stock)
+Cliente
+
+ClienteID (Identificador único del cliente)
+Nombre (Nombre del cliente)
+Email (Correo electrónico del cliente)
+Telefono (Número de teléfono del cliente)
+Venta
+
+VentaID (Identificador único de la venta)
+ClienteID (Identificador del cliente que realiza la venta)
+FechaVenta (Fecha en que se realiza la venta)
+Venta_Detalle
+
+VentaDetalleID (Identificador único del detalle de la venta)
+VentaID (Identificador de la venta)
+ProductoID (Identificador del producto vendido)
+Cantidad (Cantidad del producto vendido)
+
+## Ejercicios:
+Basándote en el script de creación de TiendaOnlineV2 y los scripts de inserción proporcionados, realiza los siguientes ejercicios:
+
+1. Consulta de Ventas por Cliente:
+Muestra todas las ventas realizadas por el cliente con ID 1.
+
+2. Consulta de Detalles de una Venta:
+Muestra todos los detalles de la venta con ID 1.
+
+3. Actualización de Stock de Producto:
+Actualiza el stock del producto con ID 3, restando 5 unidades.
+
+4. Inserción de un Nuevo Producto:
+Agrega un nuevo producto a la tabla "Producto" con los siguientes datos:
+
+Nombre: "Nuevo Producto"
+Precio: 99.99
+Stock: 50
+Eliminación de una Venta:
+Elimina la venta con ID 2 de la tabla "Venta".
+
+## Respuestas de Ejemplo:
+1. ```ql SELECT * FROM Venta WHERE ClienteID = 1;```
+2. ```sql SELECT * FROM Venta_Detalle WHERE VentaID = 1;```
+3. ```sql UPDATE Producto SET Stock = Stock - 5 WHERE ProductoID = 3;```
+4. ```sql INSERT INTO Producto (Nombre, Precio, Stock) VALUES ('Nuevo Producto', 99.99, 50);```
+5. ```sql DELETE FROM Venta WHERE VentaID = 2;```
+
+## Ejercicios Avanzados sin Solución:
+Explora y resuelve los siguientes desafíos para profundizar tu comprensión:
+
+1. Consulta de Productos Más Vendidos:
+Muestra los productos más vendidos, ordenados por cantidad vendida.
+
+2. Consulta de Ventas por Fecha:
+Muestra todas las ventas realizadas en un rango de fechas específico.
+
+3. Actualización de Precios:
+Incrementa el precio de todos los productos en un 10%.
+
+4. Inserción de una Venta Completa:
+Agrega una nueva venta, incluyendo detalles de venta, para un cliente existente.
