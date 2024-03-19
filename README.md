@@ -18,12 +18,12 @@ Usando el script de "script_clase 01.sql"
 6. **Eliminación de Datos**: Eliminar el libro con ID 1 de la tabla "Libros".
 
 ## Respuestas: 
-1. ```sql SELECT * FROM Libros;```
-2. ```sql SELECT Autores.Nombre, Autores.Nacionalidad FROM Autores JOIN Libros ON Autores.ID = Libros.Autor_ID WHERE Libros.ID = 2;```
-3. ```sql SELECT Libros.Titulo, Autores.Nombre FROM Libros JOIN Autores ON Libros.Autor_ID = Autores.ID;```
-4. ```sql UPDATE Autores SET Nacionalidad = 'Argentino - Francés' WHERE ID = 3;```
-5. ```sql INSERT INTO Autores (ID, Nombre, Nacionalidad) VALUES (4, 'Isabel Allende', 'Chilena');```
-6. ```sql DELETE FROM Libros WHERE ID = 1;```
+1. ``` SELECT * FROM Libros;```
+2. ``` SELECT Autores.Nombre, Autores.Nacionalidad FROM Autores JOIN Libros ON Autores.ID = Libros.Autor_ID WHERE Libros.ID = 2;```
+3. ``` SELECT Libros.Titulo, Autores.Nombre FROM Libros JOIN Autores ON Libros.Autor_ID = Autores.ID;```
+4. ``` UPDATE Autores SET Nacionalidad = 'Argentino - Francés' WHERE ID = 3;```
+5. ``` INSERT INTO Autores (ID, Nombre, Nacionalidad) VALUES (4, 'Isabel Allende', 'Chilena');```
+6. ``` DELETE FROM Libros WHERE ID = 1;```
 
 ## Ejercicios sin solucion :
 
@@ -100,10 +100,10 @@ Eliminación de Pedido:
 Elimina el pedido con ID 2 de la tabla "Pedidos".
 
 ## Respuestas:
-1. ```sql SELECT * FROM Productos WHERE Categoría_ID = (SELECT ID FROM Categorías WHERE Nombre = 'Electrónica');```
-2. ```sql SELECT * FROM Pedidos WHERE Cliente_ID = 1;```
-3. ```sql UPDATE Productos SET Stock = Stock - 5 WHERE ID = 3;```
-4. ```sql INSERT INTO Clientes (Nombre, Email, Dirección) VALUES ('Ana López', 'ana@email.com', 'Calle 123, Ciudad');```
+1. ``` SELECT * FROM Productos WHERE Categoría_ID = (SELECT ID FROM Categorías WHERE Nombre = 'Electrónica');```
+2. ``` SELECT * FROM Pedidos WHERE Cliente_ID = 1;```
+3. ``` UPDATE Productos SET Stock = Stock - 5 WHERE ID = 3;```
+4. ``` INSERT INTO Clientes (Nombre, Email, Dirección) VALUES ('Ana López', 'ana@email.com', 'Calle 123, Ciudad');```
 
 ## Ejercicios sin solución:
 1. Consulta de Productos por Precio:
@@ -179,11 +179,11 @@ Eliminación de una Venta:
 Elimina la venta con ID 2 de la tabla "Venta".
 
 ## Respuestas de Ejemplo:
-1. ```ql SELECT * FROM Venta WHERE ClienteID = 1;```
-2. ```sql SELECT * FROM Venta_Detalle WHERE VentaID = 1;```
-3. ```sql UPDATE Producto SET Stock = Stock - 5 WHERE ProductoID = 3;```
-4. ```sql INSERT INTO Producto (Nombre, Precio, Stock) VALUES ('Nuevo Producto', 99.99, 50);```
-5. ```sql DELETE FROM Venta WHERE VentaID = 2;```
+1. ``` SELECT * FROM Venta WHERE ClienteID = 1;```
+2. ``` SELECT * FROM Venta_Detalle WHERE VentaID = 1;```
+3. ``` UPDATE Producto SET Stock = Stock - 5 WHERE ProductoID = 3;```
+4. ``` INSERT INTO Producto (Nombre, Precio, Stock) VALUES ('Nuevo Producto', 99.99, 50);```
+5. ``` DELETE FROM Venta WHERE VentaID = 2;```
 
 ## Ejercicios Avanzados sin Solución:
 Explora y resuelve los siguientes desafíos para profundizar tu comprensión:
