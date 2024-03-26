@@ -2,6 +2,8 @@ CREATE DATABASE TiendaOnlineV2;
 
 USE TiendaOnlineV2;
 
+SET DATEFORMAT 'YMD'
+
 CREATE TABLE Producto (
     ProductoID INT PRIMARY KEY IDENTITY,
     Nombre VARCHAR(255),

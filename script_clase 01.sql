@@ -2,6 +2,8 @@ CREATE DATABASE Libreria;
 
 USE Libreria;
 
+SET DATEFORMAT 'YMD'
+
 CREATE TABLE Autores (
     ID INT PRIMARY KEY,
     Nombre VARCHAR(100),
