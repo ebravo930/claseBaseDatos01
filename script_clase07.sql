@@ -1,5 +1,3 @@
-CREATE DATABASE ProveedoresDB;
-USE ProveedoresDB;
 
 -- Crear tabla de empresas
 CREATE TABLE Empresa (
@@ -94,19 +92,18 @@ INSERT INTO Usuario (Nombre, Email, Rol) VALUES
 
 -- Insertar más registros de acciones
 INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES
-(3, 1, 'Carga', '2024-04-05 11:00:00'),
-(4, 2, 'Carga', '2024-04-05 11:30:00'),
-(1, 3, 'Modificación', '2024-04-06 12:00:00'),
-(2, 4, 'Eliminación', '2024-04-06 12:30:00'),
-(3, 5, 'Carga', '2024-04-06 13:00:00'),
-(4, 6, 'Carga', '2024-04-06 13:30:00'),
-(1, 7, 'Modificación', '2024-04-07 14:00:00'),
-(2, 8, 'Eliminación', '2024-04-07 14:30:00'),
-(3, 9, 'Carga', '2024-04-07 15:00:00'),
-(4, 10, 'Carga', '2024-04-07 15:30:00'),
-(1, 11, 'Modificación', '2024-04-08 16:00:00'),
-(2, 12, 'Eliminación', '2024-04-08 16:30:00'),
-(3, 13, 'Carga', '2024-04-08 17:00:00'),
-(4, 14, 'Carga', '2024-04-08 17:30:00'),
-(1, 15, 'Modificación', '2024-04-09 18:00:00'),
-(2, 16, 'Eliminación', '2024-04-09 18:30:00');
+(3, 1, 'Carga', '2024-04-05 11:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(4, 2, 'Carga', '2024-04-05 11:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(1, 3, 'Modificación', '2024-04-06 12:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(2, 4, 'Eliminación', '2024-04-06 12:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(3, 5, 'Carga', '2024-04-06 13:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(4, 6, 'Carga', '2024-04-06 13:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(1, 7, 'Modificación', '2024-04-07 14:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(2, 8, 'Eliminación', '2024-04-07 14:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(3, 9, 'Carga', '2024-04-07 15:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(4, 10, 'Carga', '2024-04-07 15:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(1, 11, 'Modificación', '2024-04-08 16:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(2, 12, 'Eliminación', '2024-04-08 16:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(3, 13, 'Carga', '2024-04-08 17:00:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(4, 14, 'Carga', '2024-04-08 17:30:00')
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES(1, 15, 'Modificación', '2024-04-09 18:00:00')
