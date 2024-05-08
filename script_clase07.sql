@@ -59,3 +59,54 @@ INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES
 (1, 1, 'Carga', '2024-04-05 10:00:00'),
 (2, 2, 'Carga', '2024-04-05 10:30:00'),
 (1, 3, 'Carga', '2024-04-06 11:00:00');
+
+
+USE ProveedoresDB;
+
+-- Insertar más empresas
+INSERT INTO Empresa (RutEmpresa, NombreEmpresa, Direccion) VALUES
+('76543210-3', 'Empresa C', 'Avenida Tercera 789'),
+('11223344-5', 'Empresa D', 'Boulevard Cuarta 101'),
+('55667788-9', 'Empresa E', 'Camino Quinto 202'),
+('22334455-6', 'Empresa F', 'Ruta Sexta 303');
+
+-- Insertar más documentos de proveedores
+INSERT INTO DocumentoProveedor (RutEmpresa, TipoDocumento, FolioDocumento, FechaEmision, FechaCarga) VALUES
+('12345678-9', 'Factura', 1003, '2024-04-05', '2024-04-06'),
+('12345678-9', 'Nota Crédito', 1004, '2024-04-06', '2024-04-07'),
+('98765432-1', 'Boleta', 2002, '2024-04-04', '2024-04-07'),
+('98765432-1', 'Guía Despacho', 2003, '2024-04-05', '2024-04-08'),
+('76543210-3', 'Factura', 3001, '2024-04-01', '2024-04-05'),
+('76543210-3', 'Nota Crédito', 3002, '2024-04-02', '2024-04-06'),
+('11223344-5', 'Factura', 4001, '2024-04-03', '2024-04-07'),
+('11223344-5', 'Boleta', 4002, '2024-04-04', '2024-04-08'),
+('55667788-9', 'Guía Despacho', 5001, '2024-04-01', '2024-04-05'),
+('55667788-9', 'Factura', 5002, '2024-04-03', '2024-04-06'),
+('22334455-6', 'Boleta', 6001, '2024-04-02', '2024-04-07'),
+('22334455-6', 'Nota Crédito', 6002, '2024-04-03', '2024-04-08');
+
+-- Insertar más usuarios
+INSERT INTO Usuario (Nombre, Email, Rol) VALUES
+('Carlos Silva', 'carlos.silva@example.com', 'Administrador'),
+('Laura Martínez', 'laura.martinez@example.com', 'Analista'),
+('Pedro Torres', 'pedro.torres@example.com', 'Supervisor'),
+('Ana Rivera', 'ana.rivera@example.com', 'Gerente');
+
+-- Insertar más registros de acciones
+INSERT INTO Registro (ID_Usuario, ID_Documento, Accion, FechaRegistro) VALUES
+(3, 1, 'Carga', '2024-04-05 11:00:00'),
+(4, 2, 'Carga', '2024-04-05 11:30:00'),
+(1, 3, 'Modificación', '2024-04-06 12:00:00'),
+(2, 4, 'Eliminación', '2024-04-06 12:30:00'),
+(3, 5, 'Carga', '2024-04-06 13:00:00'),
+(4, 6, 'Carga', '2024-04-06 13:30:00'),
+(1, 7, 'Modificación', '2024-04-07 14:00:00'),
+(2, 8, 'Eliminación', '2024-04-07 14:30:00'),
+(3, 9, 'Carga', '2024-04-07 15:00:00'),
+(4, 10, 'Carga', '2024-04-07 15:30:00'),
+(1, 11, 'Modificación', '2024-04-08 16:00:00'),
+(2, 12, 'Eliminación', '2024-04-08 16:30:00'),
+(3, 13, 'Carga', '2024-04-08 17:00:00'),
+(4, 14, 'Carga', '2024-04-08 17:30:00'),
+(1, 15, 'Modificación', '2024-04-09 18:00:00'),
+(2, 16, 'Eliminación', '2024-04-09 18:30:00');
