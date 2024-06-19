@@ -7,7 +7,7 @@ SET DATEFORMAT 'YMD'
 CREATE TABLE Producto (
     ProductoID INT PRIMARY KEY IDENTITY,
     Nombre VARCHAR(255),
-    Precio DECIMAL(10, 2),
+    Precio MONEY,
     Stock INT
 );
 
@@ -15,24 +15,43 @@ CREATE TABLE Cliente (
     ClienteID INT PRIMARY KEY IDENTITY,
     Nombre VARCHAR(255),
     Email VARCHAR(255),
-    Telefono VARCHAR(50)
+    Telefono VARCHAR(50),
+	FechaNacimiento DATE,
+	Direccion VARCHAR(255),
+	Rut VARCHAR(10)
+);
+
+CREATE TABLE MedioPago(
+	MedioPagoId INT PRIMARY KEY IDENTITY,
+	Descripcion VARCHAR(100),
+	Estado BIT
 );
 
 CREATE TABLE Venta (
     VentaID INT PRIMARY KEY IDENTITY,
     ClienteID INT,
     FechaVenta DATETIME,
-    FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID)
+	MontoTotal MONEY,
+	MontoIva MONEY,
+	MontoExento MONEY,
+	MontoNeto MONEY,
+	TipoMoneda VARCHAR(3),
+	MedioPagoId INT, 
+    FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID),
+	FOREIGN KEY (MedioPagoId) REFERENCES MedioPago(MedioPagoId)
 );
 
 CREATE TABLE Venta_Detalle (
     VentaDetalleID INT PRIMARY KEY IDENTITY,
     VentaID INT,
     ProductoID INT,
+	PrecioUnitario MONEY,
     Cantidad INT,
+	DescuentoPorcentaje INT,
     FOREIGN KEY (VentaID) REFERENCES Venta(VentaID),
     FOREIGN KEY (ProductoID) REFERENCES Producto(ProductoID)
 );
+
 
 
 INSERT INTO Producto (Nombre, Precio, Stock) VALUES 
